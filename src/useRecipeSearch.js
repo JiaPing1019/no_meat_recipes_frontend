@@ -17,27 +17,32 @@ export default function useRecipeSearch(query, pageNumber) {
 
     let cancel
 
-    axios({
-      method: "GET",
-      // FIXME: Test in local temporarily
-      url: "http://localhost:3000/recipes",
-      params: { query: query, page: pageNumber },
-      cancelTOken: new axios.CancelToken((c) => (cancel = c)),
-    })
-      .then((res) => {
-        setRecipes((prevRecipes) => {
-          return [...new Set([...prevRecipes, ...res.data.recipes])];
-        });
+    const fetchRecipes = async () => {
+      try {
+        let res = await axios.get("http://localhost:3000/recipes", {
+          params: { query: query, page: pageNumber },
+          cancelTOken: new axios.CancelToken((c) => (cancel = c))
+        })
 
+        setRecipes((prevRecipes) => {
+          return [...new Set([...prevRecipes, ...res.data.recipes])]
+        });
         setHasMore(res.data.recipes.length > 0);
         setLoading(false);
-      })
-      .catch((e) => {
-        if (axios.isCancel(e)) return;
+      } catch (error) {
+        if (axios.isCancel(error)) return;
         setError(true);
-      });
+      }
 
-    return () => cancel()
+      return () => cancel()
+    }
+    const timeOutId = setTimeout(() => {
+      fetchRecipes();
+    }, 500);
+
+    return () => {
+      clearTimeout(timeOutId);
+    }
   }, [query, pageNumber])
 
   return {
