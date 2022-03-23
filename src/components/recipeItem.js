@@ -29,7 +29,9 @@ const RecipeItem = ({
         <div className="card-content-item">
           ● Ingredients:{" "}
           {ingredients.map((ingredient) => (
-            <div className="card-content-item-list">○ {ingredient.name}</div>
+            <div key={ingredient.name} className = "card-content-item-list">
+              ○ {ingredient.name}
+            </div>
           ))}
         </div>
         <div className="card-content-author">By {author}</div>
