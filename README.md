@@ -1,71 +1,53 @@
-# Getting Started with Create React App
+# no_meat_recipes_backend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+This is a project that helps users find the most relevant vegan/vegetarian recipes that they can easily cook for their vegan/vegetarian food.
 
-In the project directory, you can run:
+(This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app))
 
-### `npm start`
+## User story
 
-Runs the app in the development mode.\
+- As a Vegetarian, I want the recipes without any animal, including pigs, chickens, cows, sheep, and fish
+- As a Vegan, I want the recipes without any animal, including pigs, chickens, cows, sheep, and fish. Plus without dairy products and eggs 
+- As a User, I want to search recipes that match my current ingredients
+
+## Quickstart
+
+- Clone/download the repository
+```
+git clone git@github.com:JiaPing1019/no_meat_recipes_frontend.git 
+```
+
+- Move to ruby_app directory
+```
+ cd no_meat_recipes_frontend
+```
+
+- Install the dependencies
+```
+npm install
+```
+
+- Runs the app in the development mode
+```
+npm start
+```
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Run the backend server locally 
+Please refer to this repository - [no_meat_recipes_backend](https://github.com/JiaPing1019/no_meat_recipes_backend) 
 
-### `npm test`
+## Pending features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [ ] Create search boxes for `catogory_name` 、 `title` 、 `cook_time` 、 `prep_time`  、 `ratings` on the UI
 
-### `npm run build`
+- [ ] Make the webpage more responsible. Consider to introduce CSS Frameworks like Tailwind CSS, Material UI in the future. (Also, it can solve the confused name of the CSS)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [ ] improve the UI especially the height of recipes are not the same currently 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [ ] Add show page for each recipe
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# no_meat_recipes_frontend
+-----------
+Thank you for taking time to review my code. If you have any suggestions or feedback, I would definitely like to hear from you. Cheers. 
