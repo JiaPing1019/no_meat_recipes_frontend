@@ -1,18 +1,19 @@
 import React, { useState, useRef, useCallback } from "react";
 import RecipeItem from "./RecipeItem";
 import useRecipeSearch from "../helpers/useRecipeSearch";
+import "../App.css";
 
 const Recipe = () => {
-  const [query, setQuery] = useState("");
+  const [ingredientQuery, setIngredientQuery] = useState("");
   const [pageNumber, setPageNumber] = useState(1);
 
   const { recipes, hasMore, loading, error } = useRecipeSearch(
-    query,
+    ingredientQuery,
     pageNumber
   );
 
   const observer = useRef();
-  // whenever the ref element is create, it's gonna to call the function instead of using callback
+  // whenever the ref element is created, it gonna to call the function instead of using callback
   const lastRecipeElementRef = useCallback(
     (node) => {
       if (loading) return;
@@ -31,9 +32,8 @@ const Recipe = () => {
   );
 
   function handleSearch(e) {
-    const { value } = e.target;
-    setQuery(e.target.value);
-    // Everytime when we query, we want to set the page back to the first page
+    setIngredientQuery(e.target.value);
+    // Everytime when we execute query, we need to set page back to the first page
     setPageNumber(1);
   }
 
@@ -41,14 +41,15 @@ const Recipe = () => {
     <>
       <div className="text-title">No Meat Recipes</div>
       <div className="text-title-slogan">Vegetarian taste better :)</div>
-      <input
-        type="text"
-        value={query}
-        onChange={handleSearch}
-        placeholder="Search ingredients. e.g. banana, apple, sugar, ..."
-        className="text-search"
-      />
+
       <div className="recipe-container">
+        <input
+          type="text"
+          value={ingredientQuery}
+          onChange={handleSearch}
+          placeholder="Search the recipes contain all ingredients. e.g. banana apple sugar, ..."
+          className="text-search"
+        />
         {recipes.map((recipe, index) => {
           if (recipes.length === index + 1) {
             return (
@@ -68,9 +69,9 @@ const Recipe = () => {
             );
           }
         })}
-        <div>{loading && "Loading..."}</div>
-        <div>{error && "Error"}</div>
       </div>
+      <div className="text-infomation-msg">{loading && "Loading..."}</div>
+      <div className="text-infomation-msg">{error && "Error"}</div>
     </>
   );
 };

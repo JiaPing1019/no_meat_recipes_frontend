@@ -1,30 +1,32 @@
 :root {
-  --dark-color: #333333;
-  --gret-color: #808080;
+  --dark-green: #193300;
+  --light-green: #336600;
+  --grey-color: #404040;
 }
 
 .container {
-  max-width: 1500px;
+  max-width: 1440px;
   margin: auto;
 }
 
 .recipe-container {
+  flex-direction: row;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .recipe-info {
-  flex: 1 1 200px;
   margin: 20px 20px 20px 0px;
 }
 
-.text-primary {
-  color: var(--dark-color);
+.card-title {
+  color: var(--light-green);
+  text-align: center;
 }
 
-.text-secondary {
+.card-content {
+  overflow: auto;
   color: var(--grey-color);
 }
 
@@ -32,29 +34,57 @@
   padding: 1rem;
   border: #ccc 1px dotted;
   margin: 0.7rem 0;
+  min-width: 320px;
 }
 
 .card-title {
   font: 700 24px/32px "Copper Pot",serif;
+  text-align: center;
   letter-spacing: 0;
+}
+
+.card-img {
+ width: 100%;
 }
 
 .text-title {
   text-align: center;
   font-size: 4em;
+  color: var(--dark-green);
 }
 
 .text-title-slogan {
   text-align: center;
   font-size: 1.5em;
   margin: 0.3rem 0 2rem 0;
+  color: var(--dark-green);
 }
 
 .text-search {
   height: 40px;
   width: 90%;
+  display: flex;
   font-size: 20px;
-  padding-left: 10px;
   border-radius: 5px;
+}
 
+.card-content-item {
+  margin-bottom: 3px;
+}
+
+.card-content-item-list {
+  padding-left: 15px;
+  margin-bottom: 2px;
+}
+
+.card-content-author {
+  margin-top: 10px;
+  text-align: right;
+  text-decoration: underline;
+}
+
+.text-infomation-msg {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 24px;
 }

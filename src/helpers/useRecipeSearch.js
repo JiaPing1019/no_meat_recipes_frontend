@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-export default function useRecipeSearch(query, pageNumber) {
+export default function useRecipeSearch(ingredientQuery, pageNumber) {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
   const [recipes, setRecipes] = useState([])
@@ -9,7 +9,7 @@ export default function useRecipeSearch(query, pageNumber) {
 
   useEffect(() => {
     setRecipes([])
-  }, [query])
+  }, [ingredientQuery])
 
   useEffect(() => {
     setLoading(true)
@@ -20,9 +20,12 @@ export default function useRecipeSearch(query, pageNumber) {
     const fetchRecipes = async () => {
       try {
         let res = await axios.get("http://localhost:3000/recipes", {
-          params: { query: query, page: pageNumber },
-          cancelTOken: new axios.CancelToken((c) => (cancel = c))
-        })
+          params: {
+            ingredientQuery: ingredientQuery,
+            page: pageNumber,
+          },
+          cancelTOken: new axios.CancelToken((c) => (cancel = c)),
+        });
 
         setRecipes((prevRecipes) => {
           return [...new Set([...prevRecipes, ...res.data.recipes])]
@@ -43,7 +46,7 @@ export default function useRecipeSearch(query, pageNumber) {
     return () => {
       clearTimeout(timeOutId);
     }
-  }, [query, pageNumber])
+  }, [ingredientQuery, pageNumber])
 
   return {
     loading, error, recipes, hasMore

@@ -1,4 +1,5 @@
 import React from "react";
+import "./../App.css";
 
 const RecipeItem = ({
   recipe: {
@@ -15,23 +16,23 @@ const RecipeItem = ({
 }) => {
   return (
     <div className="card">
-      <h2 className="text-primary">{title}</h2>
-      <img
-        src={imageUrl}
-        className="round-img"
-        alt=""
-        style={{ width: "400px", height: "400px" }}
-      />
-      <div className="text-secondary">
-        <div className="">Category: {catogoryName}</div>
-        <div className="">Cuisine: {cuisine}</div>
-        <div className="">Ratings: {ratings}</div>
-        <div className="">Cook time: {cookTime}</div>
-        <div className="">Prep time: {prepTime}</div>
-        <div className="">
-          Ingredients {ingredients.map((ingredient) => ingredient.name)}
+      <h2 className="card-title">{title}</h2>
+      <img src={imageUrl} className="round-img card-img" alt="" />
+      <div className="card-content">
+        <div className="card-content-item">● Category: {catogoryName}</div>
+        {cuisine ? (
+          <div className="card-content-item">● Cuisine: {cuisine}</div>
+        ) : null}
+        <div className="card-content-item">● Ratings: {ratings}</div>
+        <div className="card-content-item">● Cook time: {cookTime}</div>
+        <div className="card-content-item">● Prep time: {prepTime}</div>
+        <div className="card-content-item">
+          ● Ingredients:{" "}
+          {ingredients.map((ingredient) => (
+            <div className="card-content-item-list">○ {ingredient.name}</div>
+          ))}
         </div>
-        <div className="">By {author}</div>
+        <div className="card-content-author">By {author}</div>
       </div>
     </div>
   );
