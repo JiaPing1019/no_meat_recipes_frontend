@@ -18,6 +18,7 @@
 
 .recipe-info {
   margin: 20px 20px 20px 0px;
+  flex: 1;
 }
 
 .card-title {
