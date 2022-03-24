@@ -38,6 +38,13 @@ Open [http://localhost:3001](http://localhost:3001) to view it in your browser.
 - Run the backend server in [http://localhost:3000](http://localhost:3000) 
 You can refer to this repository - [no_meat_recipes_backend](https://github.com/JiaPing1019/no_meat_recipes_backend) 
 
+## Demo
+
+
+https://user-images.githubusercontent.com/12680148/159821727-01d51dfc-7c38-4a45-9cb4-d04072a02c2e.mov
+
+
+
 ## Pending features
 
 - [ ] Create search boxes for `catogory_name` 、 `title` 、 `cook_time` 、 `prep_time`  、 `ratings` on the UI
