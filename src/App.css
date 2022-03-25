@@ -5,7 +5,7 @@
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 85%;
   margin: auto;
 }
 
@@ -17,8 +17,7 @@
 }
 
 .recipe-info {
-  margin: 20px 20px 20px 0px;
-  flex: 1 1 200px;
+  margin: 20px 20px 5px 5px;
 }
 
 .card-title {
@@ -34,12 +33,11 @@
   padding: 1rem;
   border: #ccc 1px dotted;
   margin: 0.7rem 0;
-  min-width: 320px;
-  max-width: 400px;
+  width: 280px;
 }
 
 .card-title {
-  font: 700 24px/32px "Copper Pot",serif;
+  font: 700 24px "Copper Pot",serif;
   text-align: center;
   letter-spacing: 0;
 }
@@ -50,7 +48,7 @@
 
 .text-title {
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   color: var(--dark-green);
 }
 
@@ -62,10 +60,11 @@
 }
 
 .text-search {
-  height: 40px;
-  width: 90%;
+  height: 36px;
+  width: 75%;
   display: flex;
   font-size: 20px;
+  padding-left: 10px;
   border-radius: 5px;
 }
 
