@@ -19,7 +19,7 @@ export default function useRecipeSearch(ingredientQuery, pageNumber) {
 
     const fetchRecipes = async () => {
       try {
-        let res = await axios.get("http://localhost:3000/recipes", {
+        let res = await axios.get(process.env.REACT_APP_RECIPES_URL, {
           params: {
             ingredientQuery: ingredientQuery,
             page: pageNumber,
