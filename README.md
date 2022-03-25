@@ -24,6 +24,11 @@ git clone git@github.com:JiaPing1019/no_meat_recipes_frontend.git
  cd no_meat_recipes_frontend
 ```
 
+- Copy custom environment variables
+```
+cp .example.env .env
+```
+
 - Install the dependencies
 ```
 npm install
