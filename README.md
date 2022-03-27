@@ -62,4 +62,8 @@ https://user-images.githubusercontent.com/12680148/159821727-01d51dfc-7c38-4a45-
 
 
 -----------
+
+⚠️ Please ignore the error below since I was thinking to use Vercel to deploy this project. Eventually, I went for Heroku in order to get the Bonus points at Pennylane this time.<br>
+ <img width="500" alt="Screen Shot 2022-03-28 at 0 01 11" src="https://user-images.githubusercontent.com/12680148/160304876-d934f197-ca6e-470f-bc44-22e2a01f125a.png"><br>
+
 Thank you for taking time to review my code. If you have any suggestions or feedback, I would definitely like to hear from you. Cheers. 
